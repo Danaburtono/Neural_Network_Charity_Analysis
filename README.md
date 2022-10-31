@@ -1,8 +1,6 @@
 # Neural_Network_Charity_Analysis
 
-The report should contain the following:
-
-# Overview of the analysis
+## Overview of the Analysis
 Alphabet Soup has donated to over 34,000 organizations over the years, some of which were successful investments and others that were not. With the data provided we were asked to use machine learning techiques and apply neural network applications to the data and provide a predictive measure to determine which organizations would be safe deicisons and which are risky. 
 
 This project explores the advantages and disadvantages of neural networks. This project is comprised of 3 steps:<br/>
@@ -21,13 +19,16 @@ In the Optimization phase, contains 3 iterations of the original model with seve
 
 ## Data Preprocessing
 What variable(s) are considered the target(s) for your model?<br/>
-Checking to see if the target is marked as IS_SUCCESSFUL in the DataFrame, indicating that it has been successfully funded by AlphabetSoup.<br/>
+
+- Checking to see if the target is marked as `IS_SUCCESSFUL` in the DataFrame, indicating that it has been successfully funded by AlphabetSoup.<br/>
 
 What variable(s) are considered to be the features for your model?<br/>
-The following columns APPLICATION_TYPE, AFFILIATION, CLASSIFICATION, USE_CASE, ORGANIZATION, STATUS, INCOME_AMT, SPECIAL_CONSIDERATIONS, ASK_AMT are the features for our model.<br/>
+
+- The following columns `APPLICATION_TYPE`, `AFFILIATION`, `CLASSIFICATION`, `USE_CASE`, `ORGANIZATION`, `STATUS`, `INCOME_AMT`, `SPECIAL_CONSIDERATIONS`, `ASK_AMT` are the features for our model.<br/>
 
 What variable(s) are neither targets nor features, and should be removed from the input data?<br/>
-The EIN and NAME columns will not increase the accuracy of the model and can be removed to improve code efficiency.<br/>
+
+- The `EIN` and `NAME` columns will not increase the accuracy of the model and can be removed to improve code efficiency.<br/>
 
 # Compiling, Training, and Evaluating the Model
 
@@ -35,84 +36,55 @@ How many neurons, layers, and activation functions did you select for your neura
 
 ### Orginal Parameters 
 
--First hidden layer<br/>
-nn.add(tf.keras.layers.Dense(units=80, activation="sigmoid", input_dim = number_input_features))<br/>
-
--Second hidden layer<br/>
-nn.add(tf.keras.layers.Dense(units=20, activation="relu"))<br/>
-
--Output layer<br/>
-nn.add(tf.keras.layers.Dense(units=1, activation="linear"))<br/>
--epochs=5<br/>
--Accuracy: 0.7218658924102783<br/>
+- First hidden layer: neurons=80, activation="sigmoid"<br/>
+- Second hidden laye: neurons=20, activation="relu"<br/>
+- Output layer: units=1, activation="linear"<br/>
+- Epochs=5<br/>
+- Accuracy: 0.7218658924102783<br/>
 
 ### Optimzation Trail # 1
 
--First hidden layer<br/>
-nn.add(tf.keras.layers.Dense(units=90, activation="sigmoid", input_dim = number_input_features))<br/>
-
--Second hidden layer<br/>
-nn.add(tf.keras.layers.Dense(units=30, activation="relu"))<br/>
-
--third hidden layer<br/>
-nn.add(tf.keras.layers.Dense(units=20, activation="sigmoid"))<br/>
-
--Output layer<br/>
-nn.add(tf.keras.layers.Dense(units=1, activation="linear"))<br/>
-
--ModelCheckpoint<br/>
--epochs=5<br/>
--Accuracy: 0.723498523235321<br/>
+- First hidden layer: neurons=90, activation="sigmoid"<br/>
+- Second hidden laye: neurons=30, activation="relu"<br/>
+- Third hidden layer: neurons=20, activation="sigmoid"<br/>
+- Output layer: units=1, activation="linear"<br/>
+- ModelCheckpoint<br/>
+- Epochs=5<br/>
+- Accuracy: 0.723498523235321<br/>
 
 ### Optimzation Trail # 2
 
--First hidden layer<br/>
-nn.add(tf.keras.layers.Dense(units=80, activation="relu", input_dim = number_input_features))<br/>
-
--Second hidden layer<br/>
-nn.add(tf.keras.layers.Dense(units=30, activation="relu"))<br/>
-
--Third hidden layer<br/>
-nn.add(tf.keras.layers.Dense(units=10, activation="relu"))<br/>
-
--Output layer<br/>
-nn.add(tf.keras.layers.Dense(units=1, activation="sigmoid"))<br/>
-
--ModelCheckpoint<br/>
--period=5<br/>
--epochs=20<br/>
--Accuracy: 0.7258309125900269<br/>
+- First hidden layer: neurons=80, activation="relu"<br/>
+- Second hidden laye: neurons=30, activation="relu"<br/>
+- Third hidden layer: neurons=10, activation="relu"<br/>
+- Output layer: units=1, activation="sigmoid"<br/>
+- ModelCheckpoint<br/>
+- Period=5<br/>
+- Epochs=5<br/>
+- Accuracy: 0.7258309125900269<br/>
 
 ### Optimzation Trail # 3
 
--First hidden layer<br/>
-nn.add(tf.keras.layers.Dense(units=100, activation="relu", input_dim = number_input_features))<br/>
-
--Second hidden layer<br/>
-nn.add(tf.keras.layers.Dense(units=30, activation="sigmoid"))<br/>
-
--Third layer<br/>
-nn.add(tf.keras.layers.Dense(units=10, activation="sigmoid"))<br/>
-
--Output layer<br/>
-nn.add(tf.keras.layers.Dense(units=1, activation="sigmoid"))<br/>
-
--ModelCheckpoint<br/>
--period=5<br/>
--epochs=20<br/>
--Accuracy: 0.7272303104400635<br/>
+- First hidden layer: neurons=100, activation="relu"<br/>
+- Second hidden laye: neurons=30, activation="sigmoid"<br/>
+- Third hidden layer: neurons=10, activation="sigmoid"<br/>
+- Output layer: units=1, activation="sigmoid"<br/>
+- ModelCheckpoint<br/>
+- Period=5<br/>
+- Epochs=20<br/>
+- Accuracy: 0.7272303104400635<br/>
 
 Were you able to achieve the target model performance?<br/>
 
--No with each iteration the model became marginally better but no signficant changes.<br/>
+- No with each iteration the model became marginally better but no signficant changes.<br/>
 
 What steps did you take to try and increase model performance?<br/>
 
--Additional neurons are added to hidden layers <br/>
--Additional hidden layers are added<br/>
--The activation function of hidden layers or output layers is changed for optimization<br/>
--The model's weights are saved every 5 epochs<br/>
--The results are saved to an HDF5 file<br/>
+- Additional neurons are added to hidden layers <br/>
+- Additional hidden layers are added<br/>
+- The activation function of hidden layers or output layers is changed for optimization<br/>
+- The model's weights are saved every 5 epochs<br/>
+- The results are saved to an HDF5 file<br/>
 
 
 # Summary
