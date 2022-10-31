@@ -42,6 +42,10 @@ How many neurons, layers, and activation functions did you select for your neura
 - Epochs=5<br/>
 - Accuracy: 0.7218658924102783<br/>
 
+
+<img width="806" alt="Screen Shot 2022-10-30 at 9 13 38 PM" src="https://user-images.githubusercontent.com/107026442/198933799-17e4405a-29c6-4e57-9bed-542642625fce.png">
+
+
 ### Optimzation Trail # 1
 
 - First hidden layer: neurons=90, activation="sigmoid"<br/>
@@ -51,6 +55,9 @@ How many neurons, layers, and activation functions did you select for your neura
 - ModelCheckpoint<br/>
 - Epochs=5<br/>
 - Accuracy: 0.723498523235321<br/>
+
+<img width="804" alt="Screen Shot 2022-10-30 at 9 15 16 PM" src="https://user-images.githubusercontent.com/107026442/198933842-c8a69dbc-0164-416e-b37f-6e031414fecc.png">
+
 
 ### Optimzation Trail # 2
 
@@ -63,6 +70,9 @@ How many neurons, layers, and activation functions did you select for your neura
 - Epochs=5<br/>
 - Accuracy: 0.7258309125900269<br/>
 
+<img width="807" alt="Screen Shot 2022-10-30 at 9 16 42 PM" src="https://user-images.githubusercontent.com/107026442/198933889-917f9c5c-4432-4541-8ae4-2635285cf2e3.png">
+
+
 ### Optimzation Trail # 3
 
 - First hidden layer: neurons=100, activation="relu"<br/>
@@ -73,6 +83,11 @@ How many neurons, layers, and activation functions did you select for your neura
 - Period=5<br/>
 - Epochs=20<br/>
 - Accuracy: 0.7272303104400635<br/>
+
+
+<img width="803" alt="Screen Shot 2022-10-30 at 9 17 44 PM" src="https://user-images.githubusercontent.com/107026442/198933896-b22c74b0-c627-4419-ac3c-2869fcb46f5b.png">
+
+
 
 Were you able to achieve the target model performance?<br/>
 
